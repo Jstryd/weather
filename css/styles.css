@@ -1,7 +1,26 @@
 /********************
 YOUR STYLES
 *******************/
+li{
+  display: flex;
+  justify-content: space-around;
+}
 
+.temp{
+  color: red;
+  font-size: 6em;
+}
+
+.city{
+  color: green;
+}
+
+.state{
+  color: blue;
+}
+
+.image img{
+}
 
 
 
