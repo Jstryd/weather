@@ -5,6 +5,7 @@
 
 $.simpleWeather({
   location: 99004,
+  woeid: '',
   unit: 'f',
   
   success: function(weather){
@@ -24,7 +25,28 @@ $.simpleWeather({
   },
 
   
-  error: function(error){
-    console.log('Refresh page.');
-  }
-});
+  //Display Future Weather
+      $('aside figure:nth-child(1) h2').text(weather.forecast[0].day);
+      $('aside figure:nth-child(1) img').attr('src', weather.forecast[0].image);
+      $('aside figure:nth-child(1) figcaption').text(weather.forecast[0].text);
+      $('aside figure:nth-child(1) .high').text(weather.forecast[0].high);
+      
+      $('aside figure:nth-child(2) h2').text(weather.forecast[1].day);
+      $('aside figure:nth-child(2) img').attr('src', weather.forecast[1].image);
+      $('aside figure:nth-child(2) figcaption').text(weather.forecast[1].text);
+      $('aside figure:nth-child(2) .high').text(weather.forecast[1].high);
+      
+      $('aside figure:nth-child(3) h2').text(weather.forecast[2].day);
+      $('aside figure:nth-child(3) img').attr('src', weather.forecast[2].image);
+      $('aside figure:nth-child(3) figcaption').text(weather.forecast[2].text);
+      $('aside figure:nth-child(3) .high').text(weather.forecast[2].high);
+      
+      console.log(weather.forecast[0].text)
+      
+    },
+    error: function(error) {
+      // Show if weather cannot be retreived
+      console.log('Go Look Outside :-D');
+    }
+  
+  });

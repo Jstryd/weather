@@ -1,15 +1,23 @@
 /********************
 YOUR STYLES
 *******************/
-li{
-  display: flex;
-  justify-content: space-around;
+.body{
+    font-family: 'Roboto';
+    font-weight: 100;
+	line-height: 1.1;
+	letter-spacing: 0.025em;
+	margin: 0; padding: 0;
 }
 
-.temp{
-  color: red;
-  font-size: 6em;
+.information{
+    display:flex;
+    flex-flow: column-reverse;
+    justify-content: space-between;
 }
+.temp{
+	color: red;
+}
+   
 
 .city{
   color: green;
@@ -22,6 +30,18 @@ li{
 .image img{
 }
 
+aside{
+  background: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+aside figure{
+  background: blue;
+  margin: 0;
+  padding: 1em;
+}
 
 
 /********************
